@@ -158,7 +158,7 @@ func handleTextReplyBypass(msg *openwechat.Message,txt string){
 		number := mysql.GetInvitedNumber(userNickname)
 		if number >= 5{
 			currentTime := time.Now()
-			formattedTime := currentTime.Format("2006-01-02")
+			formattedTime := currentTime.Format("2006-01-02 15:04")
 			content = fmt.Sprintf("当前时间：%s\n @%s,经过小深检索您已经邀请了%d人，您的邀请人数已经达标。\n 当您看到这条消息您的邀请人数已清零",formattedTime,userNickname,number)
 			mysql.Setzero(userNickname)
 		}else{
