@@ -33,7 +33,7 @@ func HandleMsg(msg *openwechat.Message) {
 		
 		if(number >=5 ){
 			currentTime := time.Now()
-			formattedTime := currentTime.Format("2006-01-02")
+			formattedTime := currentTime.Format("2006-01-02 15:04")
 			_,err = msg.ReplyText(fmt.Sprintf("%s\n@%s 小主你好，经过小深检索你已经邀请了 %d 人,您的邀请人数已达标，请在使用的时候查询你的邀请人数，并把记录给收银人员看即可使用\n@%s，欢迎加入深井烧腊粉丝群！我们会不定时发放福利哦！开业活动：邀请五个人进入群聊即可获得五元现金消费券",formattedTime,invitor,number, invitee)) 	
 			if err != nil{
 				err = errors.Wrapf(err,"err about reply of invitor")
