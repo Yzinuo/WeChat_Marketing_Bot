@@ -20,6 +20,3 @@ go run main.go // 运行程序
 
 # 联系方式：
 ![alt text](Contact_information.jpg)
-
-# 不要脸的求打赏
-![alt text](5ddb5f5e9b5aec2dd83dd53d1c2c4a9.jpg)
